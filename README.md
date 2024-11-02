@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+I wanted to try Next.js but didn’t have a project idea. This is a very small project, but it was fun to create.
+
 ## Getting Started
 
 First, run the development server:
