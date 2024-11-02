@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { convertToJgDiff } from "./toJgDiffConvert";
+import { convertFromJgDiff } from "./fromJgDiffConvert";
 
 export default function Home() {
   const [translated, setTransleted] = useState("");
@@ -18,9 +18,9 @@ export default function Home() {
       <button
         type="button"
         className="py-5"
-        onClick={() => setTransleted(convertToJgDiff(textareaValue))}
+        onClick={() => setTransleted(convertFromJgDiff(textareaValue))}
       >
-        Convert to jg diff
+        Convert to ASCII text
       </button>
 
       <textarea
@@ -30,8 +30,8 @@ export default function Home() {
         value={translated}
         disabled
       />
-      <a href="/decode" className="py-5 text-lg underline">
-        Convert jg diff to string instead
+      <a href="/" className="py-5 text-lg underline">
+        Convert text to jg diff
       </a>
     </div>
   );
