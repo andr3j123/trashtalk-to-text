@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { convertToJgDiff } from "./toJgDiffConvert";
 
 export default function Home() {
@@ -12,7 +13,7 @@ export default function Home() {
       <textarea
         cols={50}
         rows={7}
-        className="bg-foregroud text-black p-1 resize-none"
+        className="bg-foregroud text-foreground p-1 resize-none focus:outline-none bg-[#4f4f4f]"
         onChange={(event) => setTextareaValue(event.target.value)}
       />
       <button
@@ -30,9 +31,9 @@ export default function Home() {
         value={translated}
         disabled
       />
-      <a href="/decode" className="py-5 text-lg underline">
+      <Link href="/decode" className="py-5 text-lg underline">
         Convert jg diff to string instead
-      </a>
+      </Link>
     </div>
   );
 }
